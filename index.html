@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Student Feedback</title>
 
@@ -29,7 +30,9 @@
             margin-top: 10px;
         }
 
-        input, select, textarea {
+        input,
+        select,
+        textarea {
             width: 90%;
             padding: 10px;
             margin: 5px;
@@ -43,6 +46,13 @@
             color: white;
             border: none;
             border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #thankyou {
+            margin-top: 20px;
+            color: green;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -80,9 +90,21 @@
         <label>Feedback / Comments</label>
         <textarea rows="4" placeholder="Enter your feedback"></textarea>
 
-        <button type="submit">Submit Feedback</button>
+        <button type="button" onclick="showThankYou()">
+            Submit Feedback
+        </button>
+
+        <p id="thankyou"></p>
 
     </div>
 
+    <script>
+        function showThankYou() {
+            document.getElementById("thankyou").innerHTML =
+                "Thank you for submitting your feedback!";
+        }
+    </script>
+
 </body>
+
 </html>
